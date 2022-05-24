@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en_us">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+  <head>
+    <title>title</title>
+  </head>
+  <body>
+    <div class="container">
+    <div class="header">
+    <h1>Calculator</h1>
+    </div>
+      <div class="input-group">
+        <input onfocus="this.value=''" type="number" name="input" id="input" value="enter a number">
+      </div>
+      <div class="btn-group">
+        <button>&deg; &#960;</button>
+      </div>
+      <div class="input-group">
+        <div class="btn-group">
+          <button onclick="setFirstNumber();document.getElementById('input').value = '';setOperation('plus')">+</button>
+          <button onclick="setFirstNumber();document.getElementById('input').value = '';setOperation('minus')">-</button>
+        </div>
+        <div class="btn-group">
+          <button onclick="setFirstNumber();document.getElementById('input').value = '';setOperation('times')">x</button>
+          <button onclick="setFirstNumber();document.getElementById('input').value = '';setOperation('divide')">/</button>
+        </div>
+        <div class="btn-group">
+          <button onclick="setFirstNumber();document.getElementById('input').value = '';setOperation('squared')">x<sup>2</sup></button>
+          <button onclick="setFirstNumber();document.getElementById('input').value = '';setOperation('cubed')">x<sup>3</sup></button>
+        </div>
+        <div class="btn-group">
+          <button><sup>2</sup>&#8730;</button>
+          <button><sup>3</sup>&#8730;</button>
+        </div>
+       
+        <div class="btn-group">
+          <button onclick="compute()">=</button>
+        </div>
+      </div>
+      <br><div class="output-field">
+        <span id="output"></span>
+      </div>
+      <div class="btn-group">
+        <button onclick="location.href = 'unit-converter.html'">Convert...</button>
+      </div>
+    </div>
+  </body>
+  <script>
+    document.querySelector('.header')
+      .addEventListener('click', function() {
+        document.getElementById('input').value = "";
+        document.getElementById('output').innerHTML = "";
+        clearNumber();
+        clearOp();
+      });
+  </script>
+  <script type="text/javascript" src="index.js"></script>
+</html>
