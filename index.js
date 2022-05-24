@@ -30,6 +30,16 @@ const compute = () => {
     let result = Math.pow(firstNumber, 3);
     document.getElementById("output").innerHTML = result;
   }
+  else if(operation === "sqrt") {
+    let result = Math.sqrt(firstNumber);
+    document.getElementById("output")
+    .innerHTML = result;
+  }
+  else if(operation === "cbrt") {
+    let result = Math.cbrt(firstNumber);
+    document.getElementById("output")
+    .innerHTML = result;
+  }
 }
 
 const add = (a, b) => {
